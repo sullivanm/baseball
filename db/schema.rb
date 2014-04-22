@@ -11,6 +11,58 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140422130843) do
+
+  create_table "batts", force: true do |t|
+    t.string  "playerID"
+    t.integer "yearID"
+    t.string  "league"
+    t.string  "teamID"
+    t.integer "G"
+    t.integer "AB"
+    t.integer "R"
+    t.integer "H"
+    t.integer "B2"
+    t.integer "B3"
+    t.integer "HR"
+    t.integer "RBI"
+    t.integer "SB"
+    t.integer "CS"
+  end
+
+  create_table "batts1", force: true do |t|
+    t.string   "playerID"
+    t.integer  "yearID"
+    t.string   "league"
+    t.string   "teamID"
+    t.integer  "G"
+    t.integer  "AB"
+    t.integer  "R"
+    t.integer  "H"
+    t.integer  "B2"
+    t.integer  "B3"
+    t.integer  "HR"
+    t.integer  "RBI"
+    t.integer  "SB"
+    t.integer  "CS"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "players", force: true do |t|
+    t.string  "playerID"
+    t.integer "birthYear"
+    t.string  "nameFirst"
+    t.string  "nameLast"
+  end
+
+  create_table "players1", force: true do |t|
+    t.string   "playerID"
+    t.integer  "birthYear"
+    t.string   "nameFirst"
+    t.string   "nameLast"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
